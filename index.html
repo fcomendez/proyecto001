@@ -44,40 +44,86 @@
         </div>
     </nav>
 
-    <!-- Carousel -->
-    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+    <div class="col-12">
+        <!-- Carousel -->
+        <div class="container mt-1">
+            <div id="demo" class="carousel slide" data-bs-ride="carousel">
 
-        <!-- Indicators/dots -->
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                <!-- Indicators/dots -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="4"></button>
+                </div>
+
+                <!-- The slideshow/carousel -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/img2.jpg" alt="Los Angeles" class="img-fluid d-block w-auto h-auto">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/img2.jpg" alt="Chicago" class="img-fluid d-block w-auto h-auto">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/img3.jpg" alt="New York" class="img-fluid d-block w-auto h-auto">
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <!-- The slideshow/carousel -->
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="img/img1edit.jpg" class="img-fluid w-100">
-                <img src="img/img2.jpg" class="img-fluid w-100">
-                <img src="img/img3.jpg" class="img-fluid w-100">
-            </div>
-            <div class="carousel-item">
-                <img src="chicago.jpg" alt="Chicago" class="d-block w-100">
-            </div>
-            <div class="carousel-item">
-                <img src="ny.jpg" alt="New York" class="d-block w-100">
-            </div>
-        </div>
-
-        <!-- Left and right controls/icons -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
-        </button>
     </div>
 
+    <div class="row class=container-fluid mt-1">
+        <img src="img/500x500-1.jpg" alt="nose" class="col-3">
+        <img src="img/500x500-2.jpg" alt="nose" class="col-3">
+        <img src="img/500x500-3.jpg" alt="nose" class="col-3">
+        <img src="img/500x500-4.jpg" alt="nose" class="col-3">
+    </div>
+
+    <!-- Carousel -->
+    <div class="container-fluid mt-1 col-12">
+        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+            <!-- The slideshow/carousel -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <img src="img/img3.jpg" class="img-fluid p-0 col-4">
+                        <img src="img/img3.jpg" class="img-fluid p-0  col-4">
+                        <img src="img/img1edit.jpg" class="img-fluid p-0 d-flex col-4">
+                    </div>
+                </div>
+                <div class="carousel-item active">
+                    <div class="row">
+                        <img src="img/img1edit.jpg" class="img-fluid p-0 col-4">
+                        <img src="img/img3.jpg" class="img-fluid p-0  col-4">
+                        <img src="img/img2.jpg" class="img-fluid p-0 d-flex col-4">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="container p-4 rounded">
+        <div class="d-lg-flex justify-content-between">
+            <div>
+                <span>LOGO</span>
+            </div>
+            <div class="copyright">
+                <p>developed and maintained by <a href="#" target="_blank">company</a></p>
+            </div>
+            <div>
+                <ul class="d-flex gap-3 list-unstyled">
+                    <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+                    <li><a href="#"><i class="bi bi-twitter"></i></a></li>
+                    <li><a href="#"><i class="bi bi-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 </body>
+
+
 
 </html>
