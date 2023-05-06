@@ -2,35 +2,34 @@ const nombreExpre = /^[a-zA-Z]+$/;
 const emailexpre = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 $(document).ready(function () {
-    $("#registrarse").click(function (e) {
+    $("#form_registro").submit(function (event) {
+        event.preventDefault();
         var nombre = $("#nombre").val();
         var correo = $("#correo").val();
         var contraseña = $("#password").val();
         var confirmar = $("#confirmar_contra").val();
 
         if (nombreExpre.test(nombre)) {
+            $("#p_nombre").text("");
             if (emailexpre.test(correo)) {
+                $("#p_correo").text("");
                 if (contraseña.length >= 8) {
+                    $("#p_password").text("");
                     if (contraseña !== confirmar) {
-                        alert("Error, deben coincidir")
-                        return
+                        $("#p_confirmar").text("Las contraseñas no coinciden");
                     } else {
-                        alert("Contraseñas validas")
-                        $("#form_registro").submit(function() {
-                            $(this).submit();
-                        });
+                        $("#p_confirmar").text("");
+                        alert("Enviando formulario...")
+                        $(this).unbind('submit').submit(); // Enviar formulario.
                     }
                 } else {
-                    alert("debe ser mayor a 8 caracteres")
-                    return
+                    $("#p_password").text("La contraseña debe tener al menos 8 caracteres");
                 }
             } else {
-                alert("Email inválido");
-                return
+                $("#p_correo").text("Ingrese un correo valido");
             }
         } else {
-            alert("Ingrese nombre correctamente")
-            return
+            $("#p_nombre").text("Ingrese el nombre, este debe contener solo letras");
         }
     });
 });
