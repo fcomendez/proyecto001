@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapita uwu</title>
+
+    <style>
+        #map {
+            height: 100%;
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="map"></div>
+
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyr-dnSWTWYOmR2lX-SG7Hv59JWM4yZ6A&callback=initMap">
+        </script>
+
+    <script>
+        const mapDiv = document.getElementById('map')
+
+        let map;
+
+        function initMap() {
+            map = new google.maps.Map(mapDiv, {
+                center: { lat: -36.7953267, lng: -73.06257 },
+                zoom: 15,
+            });
+
+            new google.maps.Marker({
+                position: { lat: -36.79533, lng: -73.06257 },
+                map,
+                
+            });
+
+            new google.maps.Marker({
+                position: { lat: -36.79850, lng: -73.05590 },
+                map,
+                
+            });
+        }
+
+    </script>
+
+
+</body>
+
+</html>
